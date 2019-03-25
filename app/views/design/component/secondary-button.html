@@ -1,0 +1,123 @@
+{% extends "admin_layout.html" %}
+
+
+{% block page_header %}
+
+<span class="govuk-caption-l">{{section}}</span>
+<h1 class="govuk-heading-l">{{title}}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% from "tabs/macro.njk" import govukTabs %}
+        {% from "table/macro.njk" import govukTable %}
+
+        {% set detailHtml %}
+
+        <h2 class="govuk-heading-m">Component</h2>
+        <p class="govuk-body">An extention of the govuk-button which does not use the green styling.</p>
+
+        <h2 class="govuk-heading-m">Example</h2>
+
+        <button class="govuk-button gc-button-secondary">Example</button>
+
+
+
+        <h2 class="govuk-heading-m">When to use</h2>
+        <p class="govuk-body">Consider how a service can be designed, to avoid using secondary buttons. There are
+            instances when a secondary button may be needed, for example:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>where a page has equally weighted actions but one is the preferred option</li>
+            <li>admin interfaces where there may be multiple actions applicable</li>
+        </ul>
+
+        <button class="govuk-button">Primary</button> <button class="govuk-button gc-button-secondary"
+            name="button-name" type="button">Secondary</button>
+
+
+
+        <h2 class="govuk-heading-m">Services that use this component</h2>
+
+        {% from "table/macro.njk" import govukTable %}
+
+        {{ govukTable({
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Service"
+    },
+    {
+      text: "Use"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Apply for a personal functional licence"
+      },
+      {
+        text: "Retrieve your application"
+      }
+    ]
+  ]
+}) }}
+
+        <h2 class="govuk-heading-m">User research</h2>
+        <p class="govuk-body">
+            We do not have any evidence that secondary buttons cause problems for users. However, their styling may
+            resemble a disabled button and confuse users.
+        </p>
+        <p class="govuk-body">It is important to give buttons descriptive actions and not just "Click here". The button
+            should inform the user of what will happen. For example, "Save and continue"</p>
+
+        {% endset -%}
+
+
+        {% set codeHtml %}
+
+
+    
+        <h2 class="govuk-heading-m">Implementation</h2>
+
+        <p class="govuk-body">Apply the following class to any govuk-button: <pre><code class="css">gc-button-secondary</code></pre></p>
+        
+        <h2 class="govuk-heading-m">Html</h2>
+
+        <pre><code class="html">&#x3C;button class=&#x22;govuk-button gc-button-secondary&#x22; name=&#x22;button-name&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;</code></pre>
+    
+        <h2 class="govuk-heading-m">Example</h2>
+        <button class="govuk-button gc-button-secondary" name="button-name" type="button">Secondary</button>
+
+
+        {% endset -%}
+
+
+        {{ govukTabs({
+              items: [
+                {
+                  label: "Details",
+                  id: "details-section",
+                  panel: {
+                    html: detailHtml
+                  }
+                },
+                {
+                  label: "Code",
+                  id: "code-section",
+                  panel: {
+                    html: codeHtml
+                  }
+                }
+              ]
+            }) }}
+
+    </div>
+
+
+
+</div>
+{% endblock %}

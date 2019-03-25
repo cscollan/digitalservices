@@ -38,4 +38,12 @@
 .gc-button-secondary:hover{
     box-shadow: 0px 2px 0px govuk-colour(grey-1);
     background: rgba(191, 193, 195, 0.7);
+
 }
+
+.gc-button-secondary:hover, .gc-button-secondary:active, .gc-button-secondary:focus {
+    box-shadow: 0px 2px 0px govuk-colour(grey-1);
+    background: rgba(191, 193, 195, 0.7);
+
+}
+

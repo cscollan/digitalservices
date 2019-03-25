@@ -82,6 +82,13 @@ with-proposition
     <li class="side-nav__item__sub {{ components_class }}">
       <a href="/design/components">Components</a>
     </li>
+    {% if showcomponentssub === 'true' %}
+    <li class="side-nav__item__sub_sub {{ c_secbutton_class }}">
+      <a href="/design/component/secondary-button">Secondary button</a>
+    </li>
+    
+    {% endif %}
+
     <li class="side-nav__item__sub {{ patterns_class }}">
       <a href="/design/patterns">Patterns</a>
     </li>

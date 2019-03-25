@@ -1,4 +1,5 @@
 var showdesignsub = 'false'
+var showcomponentssub = 'false'
 
 exports.design_root_get = function (req, res) {
     showdesignsub = 'true'
@@ -23,13 +24,15 @@ exports.design_styles_get = function (req, res) {
 }
 
 exports.design_components_get = function (req, res) {
-    showdesignsub = 'true'
+    showdesignsub = 'true'    
+    showcomponentssub = 'true'
     res.render('design/components', {
         'title': 'Components',
         'section': 'Design',
         'design_class': 'active',        
         'components_class': 'active',
-        showdesignsub
+        showdesignsub,
+        showcomponentssub
     })
 }
 
@@ -57,4 +60,19 @@ exports.design_pages_get = function (req, res) {
     })
 }
 
+
+
+exports.design_component_secondary_button_get = function (req, res) {
+    showdesignsub = 'true'
+    showcomponentssub = 'true'
+    res.render('design/component/secondary-button', {
+        'title': 'Secondary button',
+        'section': 'Components',
+        'design_class': 'active',        
+        'components_class': 'active',
+        'c_secbutton_class': 'active',
+        showdesignsub,
+        showcomponentssub
+    })
+}
 
