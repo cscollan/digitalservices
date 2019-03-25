@@ -65,10 +65,43 @@ exports.foundations_assessments_get = function (req, res) {
     })
 }
 
+exports.foundations_stage_discovery_get = function (req, res) {
+    showfoundationsub = 'true'
+    res.render('foundations/stages/discovery', {
+        'title': 'Discovery',
+        'section': 'Phase',
+        'foundations_class': 'active',        
+        'phases_class': 'active',
+        showfoundationsub
+    })
+}
+
 exports.foundations_stage_alpha_get = function (req, res) {
     showfoundationsub = 'true'
     res.render('foundations/stages/alpha', {
         'title': 'Alpha',
+        'section': 'Phase',
+        'foundations_class': 'active',        
+        'phases_class': 'active',
+        showfoundationsub
+    })
+}
+
+exports.foundations_stage_beta_get = function (req, res) {
+    showfoundationsub = 'true'
+    res.render('foundations/stages/beta', {
+        'title': 'Beta',
+        'section': 'Phase',
+        'foundations_class': 'active',        
+        'phases_class': 'active',
+        showfoundationsub
+    })
+}
+
+exports.foundations_stage_live_get = function (req, res) {
+    showfoundationsub = 'true'
+    res.render('foundations/stages/live', {
+        'title': 'Live',
         'section': 'Phase',
         'foundations_class': 'active',        
         'phases_class': 'active',

@@ -7,6 +7,14 @@
 
 <script src="/public/javascripts/application.js"></script>
 
-{% if useAutoStoreData %}
   <script src="/public/javascripts/auto-store-data.js"></script>
+
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.StepByStepNavigation()
+    stepByStepNavigation.start($element)
+  </script>
+
+{% if useAutoStoreData %}
+  <script src="/public/javascripts/step-by-step-navigation.js"></script>
 {% endif %}
