@@ -1,0 +1,37 @@
+{% extends "admin_layout.html" %}
+
+{% block page_header %}
+<span class="govuk-caption-l">{{section}}</span>
+<h1 class="govuk-heading-l">{{title}}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-m">Discovery</h2>
+    <p class="govuk-body">Understand the problem, our user needs and business goals</p>
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l ">
+
+    <h2 class="govuk-heading-m">Alpha</h2>
+    <p class="govuk-body">Test assumptions and hypothesis through prototypes and user research.</p>
+    <p class="govuk-body"><a href="stages/alpha">Read more about alpha</a></p>
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l ">
+
+    <h2 class="govuk-heading-m">Beta</h2>
+    <p class="govuk-body">Built the service, ensuring that it is accessible, secure and high performing.</p>
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l ">
+
+    <h2 class="govuk-heading-m">Live</h2>
+    <p class="govuk-body">Use metrics, performance data and feedback to identify continuous improvement</p>
+
+
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}

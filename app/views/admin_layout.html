@@ -1,0 +1,154 @@
+{% extends "admin_template.html" %}
+
+{% from "back-link/macro.njk"     import govukBackLink %}
+{% from "breadcrumbs/macro.njk"   import govukBreadcrumbs %}
+{% from "button/macro.njk"        import govukButton %}
+{% from "checkboxes/macro.njk"    import govukCheckboxes %}
+{% from "date-input/macro.njk"    import govukDateInput %}
+{% from "details/macro.njk"       import govukDetails %}
+{% from "error-message/macro.njk" import govukErrorMessage %}
+{% from "error-summary/macro.njk" import govukErrorSummary %}
+{% from "fieldset/macro.njk"      import govukFieldset %}
+{% from "file-upload/macro.njk"   import govukFileUpload %}
+{% from "input/macro.njk"         import govukInput %}
+{% from "label/macro.njk"         import govukLabel %}
+{% from "panel/macro.njk"         import govukPanel %}
+{% from "phase-banner/macro.njk"  import govukPhaseBanner %}
+{% from "radios/macro.njk"        import govukRadios %}
+{% from "select/macro.njk"        import govukSelect %}
+{% from "skip-link/macro.njk"     import govukSkipLink %}
+{% from "table/macro.njk"         import govukTable %}
+{% from "tag/macro.njk"           import govukTag %}
+{% from "textarea/macro.njk"      import govukTextarea %}
+{% from "warning-text/macro.njk"  import govukWarningText %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block cookie_message %}
+  <p>{{cookieText | safe }}</p>
+{% endblock %}
+
+{% block body_classes %}
+  body-admin js-enabled
+{% endblock %}
+
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
+
+{% block page_layout %}
+  
+ 
+  <nav class="side-nav dft-sidebar disable-side-bar-{{disableSidebar}}">
+    <ul>
+   
+      <li class="side-nav__item {{ hub_class }}">
+        <a href="/">Service Manual</a>
+      </li>
+
+      <li class="side-nav__item {{ foundations_class }}">
+        <a href="/foundations/">Foundations</a>
+      </li>
+
+      {% if showfoundationsub === 'true' %}
+      <li class="side-nav__item__sub {{ accessibility_class }}">
+        <a href="/foundations/accessibility">Accessibility</a>
+      </li>
+      <li class="side-nav__item__sub {{ assessments_class }}">
+          <a href="/foundations/assessments">Assessments</a>
+        </li>
+      <li class="side-nav__item__sub {{ phases_class }}">
+          <a href="/foundations/phases">Phases</a>
+        </li>   
+      <li class="side-nav__item__sub {{ principles_class }}">
+        <a href="/foundations/principles">Principles</a>
+      </li>    
+      <li class="side-nav__item__sub {{ wow_class }}">
+        <a href="/foundations/wow">Ways of working</a>
+      </li>     
+      {% endif %}
+
+      <li class="side-nav__item {{ design_class }}">
+        <a href="/design/">Design</a>
+      </li>
+
+      {% if showdesignsub === 'true' %}
+      <li class="side-nav__item__sub {{ styles_class }}">
+        <a href="/design/styles">Styles</a>
+      </li>
+      <li class="side-nav__item__sub {{ principles_class }}">
+        <a href="/design/components">Components</a>
+      </li>     
+            <li class="side-nav__item__sub {{ principles_class }}">
+          <a href="/design/patterns">Patterns</a>
+        </li> 
+       
+      <li class="side-nav__item__sub {{ principles_class }}">
+          <a href="/design/components">Pages</a>
+        </li> 
+      {% endif %}
+
+      <li class="side-nav__item {{ content_class }}">
+        <a href="/content/">Content</a>
+      </li>
+
+      <li class="side-nav__item {{ research_class }}">
+        <a href="/research/">Research library</a>
+      </li>
+
+      <li class="side-nav__item {{ metrics_class }}">
+        <a href="/metrics/">Metrics</a>
+      </li>
+              
+      
+      <li class="side-nav__item {{ prototyping_class }}">
+        <a href="/prototyping/">Prototyping</a>
+      </li>
+    </ul>
+
+    
+  </nav>
+
+
+  <div class="main-container {{enforcerClass}}">
+  
+    <main role="main" id="adminContent" class="govuk-main-wrapper">
+      {{ govukPhaseBanner({
+        "tag": {
+          "text": "Alpha"
+        },
+        "html": 'This service is in early alpha and content is regularly changing.'
+      }) }}    
+      {% block success_panel %}
+
+        <div class="success-panel">
+          <p data-successmessage></p>
+          <a class="success-panel__close" href="?">Close</a>
+        </div>
+        
+      {% endblock %}
+      {% block back_link %}{% endblock %}
+      <div class="content-wrapper">      
+          {% if title %}
+          <header class="admin-page-header">
+            {% block page_header %}{% endblock %}
+          </header>
+        {% endif %}
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+  </div>
+  
+{% endblock %}
+
+
+
+{% block body_end %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

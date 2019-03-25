@@ -1,0 +1,44 @@
+{% extends "admin_layout.html" %}
+
+
+{% block page_header %}
+
+<span class="govuk-caption-l">{{section}}</span>
+<h1 class="govuk-heading-l">{{title}}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p class="govuk-body">Alpha stage comes after discovery and during this phase we will:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>build prototypes of the service</li>
+            <li>test prototypes with real users</li>
+            <li>test hypothesis and assumptions</li>
+            <li>determine if the service can be technically built</li>
+        </ul>
+        <p class="govuk-body">Alpha is also the time to identify any risks for the beta phase as soon as possible. </p>
+
+        <p class="govuk-body">It will also be possible to identify how the service metrics can be measured. For example,
+            the start and end point, potential drop-offs or areas where a user may need to go away and do something.</p>
+
+        <div class="govuk-inset-text">
+            By building prototypes, it should also be possible to identify any problems with the design of the service
+            and solve them early on.
+        </div>
+
+        <p class="govuk-body">By the end of alpha, we should:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>know whether to move into beta</li>
+            <li>what needs to be built in the beta phase</li>
+            <li>know what to build in the beta phase</li>
+        </ul>
+
+        <p class="govuk-body">[TK]</p>
+    </div>
+
+</div>
+{% endblock %}

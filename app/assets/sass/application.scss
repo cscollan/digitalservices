@@ -1,0 +1,61 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+//Import GOV.UK Frontend
+@import "node_modules/govuk-frontend/all";
+
+//Variables specific to Blue Badge
+
+@import "variables";
+
+// Patterns that aren't in Frontend
+@import "patterns/check-your-answers";
+@import "patterns/task-list";
+
+.code {
+  color: $govuk-text-colour;
+  background-color: govuk-colour(grey-4);
+
+  text-shadow: 0 1px govuk-colour(white);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+
+  border: 1px solid $govuk-border-colour;
+  padding: 4px 4px 2px;
+}
+
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+// @import 'patterns/check-your-answers';
+// @import 'patterns/task-list';
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+@import 'patterns/sign-in';
+@import 'patterns/admin';
+@import 'patterns/cropper';
+@import 'patterns/candidate';
+@import 'patterns/guidance';
+@import 'patterns/autocomplete';
+@import 'patterns/header';
+@import 'patterns/govuk-panels';
+
+@import "components/cookie-banner";
