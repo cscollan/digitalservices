@@ -1,10 +1,10 @@
 var showprototypesub = 'false'
 
-exports.library_root_get = function (req, res) {
+exports.prototyping_root_get = function (req, res) {
     showprototypesub = 'true'
     res.render('prototyping/index', {
-        'title': 'Prototype',
-        'section': 'Prototype',
+        'title': 'Prototyping',
+        'section': 'Prototyping',
         'prototype_class': 'active',  
         showprototypesub
     })

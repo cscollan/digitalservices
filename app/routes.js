@@ -6,7 +6,7 @@ var design_Controller = require('../app/controllers/designController.js')
 var content_Controller = require('../app/controllers/contentController.js')
 var library_Controller = require('../app/controllers/libraryController.js')
 var metrics_Controller = require('../app/controllers/metricsController.js')
-var prototype_Controller = require('../app/controllers/prototypeController.js')
+var prototyping_Controller = require('../app/controllers/prototypingController.js')
 
 router.get('/', (req, res) => {
     res.render('index', {
@@ -47,6 +47,6 @@ router.get('/metrics/usersatisfaction', metrics_Controller.metrics_user_get);
 router.get('/library/', library_Controller.library_root_get);
 
 
-router.get('/prototype/', prototype_Controller.prototype_root_get);
+router.get('/prototyping/', prototyping_Controller.prototyping_root_get);
 
 module.exports = router
