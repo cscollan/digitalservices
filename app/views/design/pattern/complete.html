@@ -1,0 +1,141 @@
+{% extends "admin_layout.html" %}
+
+
+{% block page_header %}
+
+<span class="govuk-caption-l">{{section}}</span>
+<h1 class="govuk-heading-l">{{title}}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% from "tabs/macro.njk" import govukTabs %}
+    {% from "table/macro.njk" import govukTable %}
+
+    {% set detailHtml %}
+
+    <h2 class="govuk-heading-m">Pattern</h2>
+    <p class="govuk-body">The final page of a transactional service, which tells the user the outcome of the transaction
+      and any next steps or actions. </p>
+      <p class="govuk-body">This page is also used to measure how long it takes to complete a transaction using Google Analytics goal tracking. </p>
+    <p class="govuk-body">The complete page should:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>inform the user of the outcome</li>
+      <li>provide a reference number</li>
+      <li>advise of any notifications sent in relation to the transaction</li>
+      <li>tell the user what happens next</li>
+      <li>link to any related services</li>
+      <li>link to any survey for feedback</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Example</h2>
+
+    <div class="govuk-grid-column-full gc-admin-border-div">
+
+      <div class="gc-panel gc-panel--complete">
+        <h1 class="govuk-heading-l">Application submitted</h1>
+        <p class="govuk-body-l">Reference 12345</p>
+        <p class="govuk-body">We have sent you an email with details of your application.</p>
+      </div>
+
+      <h2 class="govuk-heading-m">Next steps</h2>
+      <p class="govuk-body">It takes about 14 days to process your application.</p>
+      <p class="govuk-body">We will contact you if we need any additional information from you.</p>
+
+      <h2 class="govuk-heading-m">Give us feedback about this service</h2>
+      <p class="govuk-body"><a href="#">Tell us what you thought about this service</a>. (Takes about 1 minute)</p>
+    </div>
+    <h2 class="govuk-heading-m">Services that use this component</h2>
+
+    {% from "table/macro.njk" import govukTable %}
+
+    {{ govukTable({
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Service"
+    },
+    {
+      text: "Use"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Apply for a personal functional licence"
+      },
+      {
+        text: "Retrieve your application"
+      }
+    ]
+  ]
+}) }}
+
+
+    <h2 class="govuk-heading-m">User research</h2>
+    <p class="govuk-body">
+      [TK]
+    </p>
+
+    {% endset -%}
+
+
+    {% set codeHtml %}
+
+
+
+    <h2 class="govuk-heading-m">Implementation</h2>
+
+    <p class="govuk-body">Last page in a transactional service journey.
+      
+    </p>
+
+    <h2 class="govuk-heading-m">Html</h2>
+
+    <pre><code class="html">&#x3C;div class=&#x22;gc-panel gc-panel--complete&#x22;&#x3E;
+  &#x3C;h1 class=&#x22;govuk-heading-l&#x22;&#x3E;Application submitted&#x3C;/h1&#x3E;
+  &#x3C;p class=&#x22;govuk-body-l&#x22;&#x3E;Reference 12345&#x3C;/p&#x3E;
+  &#x3C;p class=&#x22;govuk-body&#x22;&#x3E;We have sent you an email with details of your application.&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;h2 class=&#x22;govuk-heading-m&#x22;&#x3E;Next steps&#x3C;/h2&#x3E;
+&#x3C;p class=&#x22;govuk-body&#x22;&#x3E;It takes about 14 days to process your application.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;govuk-body&#x22;&#x3E;We will contact you if we need any additional information from you.&#x3C;/p&#x3E;
+
+&#x3C;h2 class=&#x22;govuk-heading-m&#x22;&#x3E;Give us feedback about this service&#x3C;/h2&#x3E;
+&#x3C;p class=&#x22;govuk-body&#x22;&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Tell us what you thought about this service&#x3C;/a&#x3E;. (Takes about 1 minute)&#x3C;/p&#x3E;</code></pre>
+
+   
+
+    {% endset -%}
+
+
+    {{ govukTabs({
+              items: [
+                {
+                  label: "Details",
+                  id: "details-section",
+                  panel: {
+                    html: detailHtml
+                  }
+                },
+                {
+                  label: "Code",
+                  id: "code-section",
+                  panel: {
+                    html: codeHtml
+                  }
+                }
+              ]
+            }) }}
+
+  </div>
+
+
+
+</div>
+{% endblock %}

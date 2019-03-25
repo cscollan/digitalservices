@@ -1,0 +1,83 @@
+{% extends "admin_layout.html" %}
+
+
+{% block page_header %}
+
+<span class="govuk-caption-l">{{section}}</span>
+<h1 class="govuk-heading-l">{{title}}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% from "tabs/macro.njk" import govukTabs %}
+    {% from "table/macro.njk" import govukTable %}
+
+    {% set detailHtml %}
+
+    <h2 class="govuk-heading-m">Pattern</h2>
+    <p class="govuk-body"> </p>
+
+
+    <h2 class="govuk-heading-m">Example</h2>
+
+    <div class="govuk-grid-column-full gc-admin-border-div">
+
+
+    </div>
+
+
+
+
+    <h2 class="govuk-heading-m">User research</h2>
+    <p class="govuk-body">
+      [TK]
+    </p>
+
+    {% endset -%}
+
+
+    {% set codeHtml %}
+
+
+
+    <h2 class="govuk-heading-m">Implementation</h2>
+
+    <p class="govuk-body"></p>
+
+    <h2 class="govuk-heading-m">Html</h2>
+
+    <pre><code class="html"></code></pre>
+
+
+
+    {% endset -%}
+
+
+    {{ govukTabs({
+              items: [
+                {
+                  label: "Details",
+                  id: "details-section",
+                  panel: {
+                    html: detailHtml
+                  }
+                },
+                {
+                  label: "Code",
+                  id: "code-section",
+                  panel: {
+                    html: codeHtml
+                  }
+                }
+              ]
+            }) }}
+
+  </div>
+
+
+
+</div>
+{% endblock %}

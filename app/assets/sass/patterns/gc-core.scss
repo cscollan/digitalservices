@@ -1,8 +1,68 @@
-.gc-pull-right{float: right;}
-.gc-clear-left{clear: left !important;}
+$gcebony: #242e46;
+$gcebonyshade: #3d4d76;
 
-.gc-tag{
-    
+.govuk-template__body {
+    background: #ffffff;
+}
+
+.govuk-template {
+    background: govuk-colour(grey-3);
+}
+
+.govuk-header {
+    background: $gcebony;
+    padding: 10px 0 15px 0;
+    border-bottom: none;
+    margin-bottom: none;
+    border-bottom: 5px solid $gcebonyshade
+}
+
+.govuk-footer {
+    background: $grey-3;
+    border-top: 5px solid $gcebony;
+}
+
+.govuk-footer .govuk-footer__link,
+.govuk-footer__licence-logo,
+.govuk-footer__licence-description {
+    color: $black;
+}
+
+.govuk-footer .govuk-footer__link:focus {
+    color: $black;
+}
+
+.govuk-header__container {
+    border-bottom: none;
+}
+
+.govuk-header__link--service-name {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0px;
+    font-weight: 700;
+}
+
+.govuk-template__body {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+
+.gc-pull-right {
+    float: right;
+}
+
+.gc-clear-left {
+    clear: left !important;
+}
+
+.gc-logo-image {
+    width: 200px;
+}
+
+.gc-tag {
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
@@ -21,29 +81,76 @@
     text-transform: uppercase;
 }
 
-@media all and (min-width:40.06em){
-.gc-tag {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
-}
+@media all and (min-width:40.06em) {
+    .gc-tag {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+    }
 }
 
-.gc-button-secondary{
+.gc-button-secondary {
     box-shadow: 0px 2px 0px govuk-colour(grey-1);
     background: govuk-colour(grey-2);
     color: #000000 !important;
 }
 
-.gc-button-secondary:hover{
+.gc-button-secondary:hover {
     box-shadow: 0px 2px 0px govuk-colour(grey-1);
     background: rgba(191, 193, 195, 0.7);
 
 }
 
-.gc-button-secondary:hover, .gc-button-secondary:active, .gc-button-secondary:focus {
+.gc-button-secondary:hover,
+.gc-button-secondary:active,
+.gc-button-secondary:focus {
     box-shadow: 0px 2px 0px govuk-colour(grey-1);
     background: rgba(191, 193, 195, 0.7);
 
 }
 
+.gc-admin-border-div {
+    border: 1px solid #000000;
+    margin: 0px 0px 30px 0px;
+}
+
+.gc-panel {
+    padding: 20px;
+    margin: 30px 0px;
+    border: 5px solid govuk-colour(grey-1);
+}
+
+.gc-panel--complete {
+    border-color: govuk-colour(green)
+}
+
+.gc-panel--info {
+    border-color: #005ea5
+}
+
+.gc-panel p:last-of-type {
+    margin-bottom: 0px
+}
+
+.gc-lexicon-list {
+    padding: 10px 0px 10px 0px;
+}
+
+
+.gc-lexicon-list a {
+    padding: 5px 9px;
+    margin: 2px;
+    background: govuk-colour(grey-3);
+    text-decoration: none;
+}
+
+.gc-lexicon-list a:first-of-type {
+    margin-left: 0px;
+}
+
+
+// @import url("https://fonts.googleapis.com/css?family=Oxygen:400,700");
+
+// * {
+//   font-family: "Oxygen", sans-serif !important;
+// }

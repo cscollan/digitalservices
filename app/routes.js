@@ -36,6 +36,9 @@ router.get('/design/pages', design_Controller.design_pages_get);
 
 router.get('/design/component/secondary-button', design_Controller.design_component_secondary_button_get);
 
+router.get('/design/pattern/complete', design_Controller.design_pattern_complete_get);
+router.get('/design/pattern/header', design_Controller.design_pattern_header_get);
+router.get('/design/pattern/footer', design_Controller.design_pattern_footer_get);
 
 router.get('/content/', content_Controller.content_root_get);
 router.get('/content/language', content_Controller.content_language_get);

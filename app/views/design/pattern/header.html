@@ -1,0 +1,154 @@
+{% extends "admin_layout.html" %}
+
+
+{% block page_header %}
+
+<span class="govuk-caption-l">{{section}}</span>
+<h1 class="govuk-heading-l">{{title}}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% from "tabs/macro.njk" import govukTabs %}
+    {% from "table/macro.njk" import govukTable %}
+
+    {% set detailHtml %}
+
+    <h2 class="govuk-heading-m">Pattern</h2>
+    <p class="govuk-body">We are not permitted to make our services look like GOV.UK and the header must reflect our own
+      branding.</p>
+    <p class="govuk-body">This pattern is the same as the core GOV Frontend header with overridden styles and logo replacement. </p>
+
+    <h2 class="govuk-heading-m">Example</h2>
+
+    <div class="govuk-grid-column-full gc-admin-border-div">
+
+      <header class="govuk-header " role="banner" data-module="header">
+        <div class="govuk-header__container govuk-width-container">
+
+          <div class="govuk-header__logo">
+            <a class="govuk-header__link govuk-header__link--homepage" href="/">
+              <img src="/public/images/logo.png" alt="Gambling Commission Logo" class="gc-logo-image">
+            </a>
+          </div>
+          <div class="govuk-header__content">
+            <a class="govuk-header__link govuk-header__link--service-name" href="/">
+              Service name
+            </a>
+            <button class="govuk-header__menu-button js-header-toggle" role="button" aria-controls="navigation"
+              aria-label="Show or hide Top Level Navigation">Menu</button>
+            <nav>
+              <ul class="govuk-header__navigation " id="navigation" aria-label="Top Level Navigation">
+                <li class="govuk-header__navigation-item">
+                  <a class="govuk-header__link" href="#">
+                    Nav item
+                  </a>
+                </li>
+                <li class="govuk-header__navigation-item">
+                  <a class="govuk-header__link" href="#">
+                    Nav item
+                  </a>
+                </li>
+                <li class="govuk-header__navigation-item">
+                  <a class="govuk-header__link" href="#">
+                    Nav item
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+    
+
+
+    <h2 class="govuk-heading-m">User research</h2>
+    <p class="govuk-body">
+      [TK]
+    </p>
+
+    {% endset -%}
+
+
+    {% set codeHtml %}
+
+
+
+    <h2 class="govuk-heading-m">Implementation</h2>
+
+    <p class="govuk-body">Implemented in layout for site-wide consistent header.
+
+    </p>
+
+    <h2 class="govuk-heading-m">Html</h2>
+
+    <pre><code class="html">&#x3C;header class=&#x22;govuk-header &#x22; role=&#x22;banner&#x22; data-module=&#x22;header&#x22;&#x3E;
+  &#x3C;div class=&#x22;govuk-header__container govuk-width-container&#x22;&#x3E;
+    &#x3C;div class=&#x22;govuk-header__logo&#x22;&#x3E;
+      &#x3C;a class=&#x22;govuk-header__link govuk-header__link--homepage&#x22; href=&#x22;/&#x22;&#x3E;
+      &#x3C;img src=&#x22;/public/images/logo.png&#x22; alt=&#x22;Gambling Commission Logo&#x22; class=&#x22;gc-logo-image&#x22;&#x3E;
+      &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+          &#x3C;div class=&#x22;govuk-header__content&#x22;&#x3E;
+            &#x3C;a class=&#x22;govuk-header__link govuk-header__link--service-name&#x22; href=&#x22;/&#x22;&#x3E;
+              Service name
+            &#x3C;/a&#x3E;
+            &#x3C;button class=&#x22;govuk-header__menu-button js-header-toggle&#x22; role=&#x22;button&#x22; aria-controls=&#x22;navigation&#x22;
+              aria-label=&#x22;Show or hide Top Level Navigation&#x22;&#x3E;Menu&#x3C;/button&#x3E;
+            &#x3C;nav&#x3E;
+              &#x3C;ul class=&#x22;govuk-header__navigation &#x22; id=&#x22;navigation&#x22; aria-label=&#x22;Top Level Navigation&#x22;&#x3E;
+                &#x3C;li class=&#x22;govuk-header__navigation-item&#x22;&#x3E;
+                  &#x3C;a class=&#x22;govuk-header__link&#x22; href=&#x22;#&#x22;&#x3E;
+                    Nav item
+                  &#x3C;/a&#x3E;
+                &#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;govuk-header__navigation-item&#x22;&#x3E;
+                  &#x3C;a class=&#x22;govuk-header__link&#x22; href=&#x22;#&#x22;&#x3E;
+                    Nav item
+                  &#x3C;/a&#x3E;
+                &#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;govuk-header__navigation-item&#x22;&#x3E;
+                  &#x3C;a class=&#x22;govuk-header__link&#x22; href=&#x22;#&#x22;&#x3E;
+                    Nav item
+                  &#x3C;/a&#x3E;
+                &#x3C;/li&#x3E;
+              &#x3C;/ul&#x3E;
+            &#x3C;/nav&#x3E;
+          &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+      &#x3C;/header&#x3E;</code></pre>
+
+
+
+    {% endset -%}
+
+
+    {{ govukTabs({
+              items: [
+                {
+                  label: "Details",
+                  id: "details-section",
+                  panel: {
+                    html: detailHtml
+                  }
+                },
+                {
+                  label: "Code",
+                  id: "code-section",
+                  panel: {
+                    html: codeHtml
+                  }
+                }
+              ]
+            }) }}
+
+  </div>
+
+
+
+</div>
+{% endblock %}

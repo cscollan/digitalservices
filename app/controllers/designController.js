@@ -1,5 +1,6 @@
 var showdesignsub = 'false'
 var showcomponentssub = 'false'
+var showpatternssub = 'false'
 
 exports.design_root_get = function (req, res) {
     showdesignsub = 'true'
@@ -39,15 +40,58 @@ exports.design_components_get = function (req, res) {
 
 exports.design_patterns_get = function (req, res) {
     showdesignsub = 'true'
+    showpatternssub = 'true'
     res.render('design/patterns', {
         'title': 'Patterns',
         'section': 'Design',
         'design_class': 'active',        
         'patterns_class': 'active',
-        showdesignsub
+        showdesignsub,
+        showpatternssub
     })
 }
 
+exports.design_pattern_complete_get = function (req, res) {
+    showdesignsub = 'true'
+    showpatternssub = 'true'
+    res.render('design/pattern/complete', {
+        'title': 'Transaction complete',
+        'section': 'Patterns',
+        'design_class': 'active',        
+        'patterns_class': 'active',
+        'p_complete_class': 'active',
+        showdesignsub,
+        showpatternssub
+    })
+}
+
+exports.design_pattern_header_get = function (req, res) {
+    showdesignsub = 'true'
+    showpatternssub = 'true'
+    res.render('design/pattern/header', {
+        'title': 'Header',
+        'section': 'Patterns',
+        'design_class': 'active',        
+        'patterns_class': 'active',
+        'p_header_class': 'active',
+        showdesignsub,
+        showpatternssub
+    })
+}
+
+exports.design_pattern_footer_get = function (req, res) {
+    showdesignsub = 'true'
+    showpatternssub = 'true'
+    res.render('design/pattern/footer', {
+        'title': 'Footer',
+        'section': 'Patterns',
+        'design_class': 'active',        
+        'patterns_class': 'active',
+        'p_footer_class': 'active',
+        showdesignsub,
+        showpatternssub
+    })
+}
 
 exports.design_pages_get = function (req, res) {
     showdesignsub = 'true'
@@ -59,8 +103,6 @@ exports.design_pages_get = function (req, res) {
         showdesignsub
     })
 }
-
-
 
 exports.design_component_secondary_button_get = function (req, res) {
     showdesignsub = 'true'

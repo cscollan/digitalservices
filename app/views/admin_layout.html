@@ -92,10 +92,23 @@ with-proposition
     <li class="side-nav__item__sub {{ patterns_class }}">
       <a href="/design/patterns">Patterns</a>
     </li>
+    {% if showpatternssub === 'true' %}
+    <li class="side-nav__item__sub_sub {{ p_header_class }}">
+        <a href="/design/pattern/header">Header</a>
+      </li>
+      <li class="side-nav__item__sub_sub {{ p_footer_class }}">
+          <a href="/design/pattern/footer">Footer</a>
+        </li>
+    <li class="side-nav__item__sub_sub {{ p_complete_class }}">
+      <a href="/design/pattern/complete">Transaction complete</a>
+    </li>
+    
+    {% endif %}
 
+<!-- 
     <li class="side-nav__item__sub {{ pages_class }}">
       <a href="/design/pages">Pages</a>
-    </li>
+    </li> -->
     {% endif %}
 
     <li class="side-nav__item {{ content_class }}">
