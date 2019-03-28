@@ -1,0 +1,73 @@
+{% extends "admin_layout.html" %}
+
+{% block page_header %}
+
+<span class="govuk-caption-l">{{section}}</span>
+<h1 class="govuk-heading-l">{{title}}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          <p class="govuk-body">When writing for services, you should aim to reduce the <a href="https://www.nngroup.com/articles/minimize-cognitive-load/" target="_blank">cognitive load</a> on users. This helps to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+
+                <li>reduce errors and time fixing content</li>
+                <li>make content easier to read people who have difficulty reading</li>                
+                <li>make it easier for people with limited or no English</li>                
+                <li>make the service accessible (<a href="http://www.w3.org/WAI/WCAG21/Understanding/readable" target="_blank">WCAG 3.1: Make text content readable and understandable</a>)</li>
+                </ul>
+                <h2 class="govuk-heading-m">Use the words that users use</h2>
+                <p class="govuk-body">Through user research, data from search result data and analytics, it is possible to understand what words and terms our users use. We should aim to reflect that in our services to make them easier to understand and use.</p>
+
+                <p class="govuk-body">Use the <a href="lexicon">lexicon</a> to see alternatives to words and phrases that we use.</p>
+                <h2 class="govuk-heading-m">Use plain English</h2>
+                <p class="govuk-body">Most people have a vocabulary of 15,000 words and terms. These are words a user is most likely to recognise and skip because they are so recognisable. Many are called high-frequency words such as prepositions, conjunctions and pronouns (and, the, on, but, me, it). low-frequency words are often nouns, verbs and adjectives take longer to read and understand.</p>
+                <p class="govuk-body">By using high freuqency words, we are allowing users to take in more information, more quickly. This is called 'using plain English' or as some people will say, 'dumbing down'.</p>
+
+<div class="govuk-inset-text">The following should be split out into menu items</div>
+
+
+            <h2 class="govuk-heading-m">Contractions</h2>
+
+            <p class="govuk-body">Contractions are a shortened version of one or more words. For example, don't (do not)</p>
+            <p class="govuk-body">In general content, the use of contractions is encouraged.</p>
+            <p class="govuk-body">[TK]</p>
+
+
+
+        <h2 class="govuk-heading-m">Dates</h2>
+        <ul class="govuk-list govuk-list--bullet">
+
+            <li>use upper case for months: January, February</li>
+            <li>don't use a comma between the month and year: 4 June 2017</li>
+            <li>when space is an issue - in tables or  titles, use truncated months:
+                Jan, Feb</li>
+            <li>use 'to' in date ranges - not hyphens. For example:
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Information for 2017 to 2019</li>
+                    <li>Monday to Friday, 9am to 5pm (put different days on a new line, don't separate with a comma)
+                    </li>
+                    <li>10 November to 21 December 2018</li>                    
+                    <li>Where a range spans multiple years, include the years: 10 November 2018 to 21 January 2019</li>
+                </ul>
+            <li>don't use quarter for dates, use the months: 'return period, Jan to Mar 2018'</li>
+            <li>when referring to today (as in a news article) include the date: 'The Gambling Commission announced today
+            ({{ today | date('DD MMMM YYYY')}}) that…'</li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">Pleasantries</h2>
+
+        <p class="govuk-body">Don't use 'please' and 'thank you' in content, it isn't necessary in digital services. People use and understand language differently between physical interactions and digital interactions. </p>
+        
+
+
+
+
+    </div>
+
+</div>
+{% endblock %}

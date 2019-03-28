@@ -32,10 +32,10 @@ exports.content_lexicon_get = function (req, res) {
     })
 }
 
-exports.content_voice_get = function (req, res) {
+exports.content_writing_get = function (req, res) {
     showcontentsub = 'true'
-    res.render('content/voice', {
-        'title': 'Voice',
+    res.render('content/writing', {
+        'title': 'Writing for services',
         'section': 'Content',
         'voice_class': 'active',  
         'content_class': 'active',

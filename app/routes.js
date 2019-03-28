@@ -43,7 +43,7 @@ router.get('/design/pattern/footer', design_Controller.design_pattern_footer_get
 router.get('/content/', content_Controller.content_root_get);
 router.get('/content/language', content_Controller.content_language_get);
 router.get('/content/lexicon', content_Controller.content_lexicon_get);
-router.get('/content/voice', content_Controller.content_voice_get);
+router.get('/content/writing', content_Controller.content_writing_get);
 
 router.get('/metrics/', metrics_Controller.metrics_root_get);
 router.get('/metrics/analytics', metrics_Controller.metrics_analytics_get);
