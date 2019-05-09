@@ -1,7 +1,8 @@
 {% extends "admin_layout.html" %}
 
-{% block page_header %}
-<a href="/services/" class="govuk-back-link">Back</a>
+
+
+{% block page_header %}<a href="/services/" class="govuk-back-link">Back</a>
 <span class="govuk-caption-l">{{section}}</span>
 <h1 class="govuk-heading-l">{{serviceData.name}}</h1>
 {% endblock %}
@@ -11,9 +12,12 @@
 {% block content %}
 
 <div class="govuk-grid-row govuk-!-margin-top-0">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds"> 
 
-        <p class="govuk-body">{{serviceData.summary}}</p>
+        {{serviceData.summary | safe}}
+
+        <h2 class="govuk-heading-m">Details</h2>
+        {{serviceData.details | safe}}
 
      </div>
     <div class="govuk-grid-column-one-third">  

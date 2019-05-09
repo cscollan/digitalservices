@@ -30,7 +30,7 @@ const onQuit = () => {
 
 gulp.task('server', function () {
   nodemon({
-    watch: ['.env', '**/*.js', '**/*.json', '**/**/*.js'],
+    watch: ['.env', '**/*.js', '**/*.json', '**/**/*.js', 'app/data/*.json'],
     script: 'listen-on-port.js',
     ignore: [
       config.paths.public + '*',

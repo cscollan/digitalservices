@@ -17,9 +17,6 @@ exports.services_root_get = function (req, res) {
 exports.service_detail_get = function (req, res) {
     showservicessub = 'true'
 
-    //Get id
-    console.log(req.params.id)
-
     var data = require('../data/services.json')
 
     var serviceData = data.services.filter(function (value) {

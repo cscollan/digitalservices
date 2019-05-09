@@ -91,7 +91,7 @@ var appViews = extensions.getAppViews([
 var nunjucksConfig = {
   autoescape: true,
   noCache: true,
-  watch: false // We are now setting this to `false` (it's by default false anyway) as having it set to `true` for production was making the tests hang
+  watch: true // We are now setting this to `false` (it's by default false anyway) as having it set to `true` for production was making the tests hang
 }
 
 if (env === 'development') {

@@ -19,6 +19,7 @@ router.get('/', (req, res) => {
 router.get('/services/', services_Controller.services_root_get);
 router.get('/services/service/detail/:id', services_Controller.service_detail_get);
 
+
 router.get('/foundations/', foundations_Controller.foundations_root_get);
 router.get('/foundations/accessibility', foundations_Controller.foundations_accessibility_get);
 router.get('/foundations/principles', foundations_Controller.foundations_principles_get);

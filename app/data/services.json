@@ -1,11 +1,11 @@
 {
-    "services":[{
+    "services": [{
         "stub": "apply-for-a-pfl",
         "name": "Apply for a personal functional licence",
         "lifecycle": "Licensing",
-        "summary": "Application service to allow the public to apply for a functional licence.",
-        "details": "",
-        "users":[{
+        "summary": "<p class='govuk-body'>Application service to allow the public to apply for a functional licence.</p>",
+        "details": "<p class='govuk-body'>Digital service which is the first to use the GOV Design System.</p>",
+        "users": [{
             "type": "Public"
         }],
         "needs": [{
@@ -14,29 +14,32 @@
         "history": [{
             "date": "2018-12-05",
             "activity": "New service launched"
-        },{
+        }, {
             "date": "2018-12-20",
             "activity": "Accessibility fixes"
-        },{
+        }, {
             "date": "2019-01-25",
             "activity": "Not provided"
-        },{
+        }, {
             "date": "2019-02-14",
             "activity": "Not provided"
-        },{
+        }, {
             "date": "2019-02-28",
             "activity": "Hotfix for memory issues"
         }],
         "links": [{
             "link": "#",
             "linkText": "Data Protection Impact Assessment"
-        },{
+        }, {
             "link": "https://analytics.google.com/analytics/web/?authuser=1#/report-home/a127743008w189798516p186113594",
             "linkText": "Google Analytics"
-        },{
+        }, {
             "link": "https://www.gov.uk/performance/dcms-personal-licence-application",
             "linkText": "GOV Performance Dashboard"
-        },{
+        }, {
+            "link": "https://gamreggbsurveys.azurewebsites.net/reporting/Survey/12267c8e-d3f5-49f3-a4f3-38b3d96d3afa",
+            "linkText": "Service Usability Score"
+        }, {
             "link": "https://gamreggbsurveys.azurewebsites.net/reporting/Survey/12267c8e-d3f5-49f3-a4f3-38b3d96d3afa",
             "linkText": "Service Usability Score"
         }]
