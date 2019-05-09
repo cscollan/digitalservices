@@ -1,0 +1,43 @@
+{% extends "admin_layout.html" %}
+
+{% block page_header %}
+
+<span class="govuk-caption-l">{{section}}</span>
+<h1 class="govuk-heading-l">{{title}}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">       
+    
+    
+            <p class="govuk-body">Understand more about the digital services provided by the Gambling Commission and access resources relating to each service.</p>
+
+            <table class="govuk-table">
+            
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">Service</th>
+                        <th class="govuk-table__header" scope="col">Summary</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+
+                              
+                     {% for service in data.services %}
+                     <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">
+                                    <a href="/services/service/detail/{{service.stub}}">{{service.name}}</a>
+                               </th>
+                            <td class="govuk-table__cell">{{service.summary}}</td>
+                          </tr>
+                      
+                     {% endfor %}
+                    </tbody>
+                  </table>
+    
+</div>
+
+</div>
+{% endblock %}

@@ -49,6 +49,10 @@ with-proposition
       <a href="/">Service Manual</a>
     </li>
 
+    <li class="side-nav__item {{ services_class }}">
+        <a href="/services/">Services</a>
+      </li>
+
     <li class="side-nav__item {{ foundations_class }}">
       <a href="/foundations/">Foundations</a>
     </li>
@@ -83,33 +87,37 @@ with-proposition
       <a href="/design/components">Components</a>
     </li>
     {% if showcomponentssub === 'true' %}
-    <li class="side-nav__item__sub_sub {{ c_secbutton_class }}">
+    <!-- <li class="side-nav__item__sub_sub {{ c_secbutton_class }}">
       <a href="/design/component/secondary-button">Secondary button</a>
-    </li>
-    
+    </li> -->
+
     {% endif %}
 
     <li class="side-nav__item__sub {{ patterns_class }}">
       <a href="/design/patterns">Patterns</a>
     </li>
     {% if showpatternssub === 'true' %}
+    <li class="side-nav__item__sub_sub {{ p_footer_class }}">
+      <a href="/design/pattern/footer">Footer</a>
+    </li>
     <li class="side-nav__item__sub_sub {{ p_header_class }}">
-        <a href="/design/pattern/header">Header</a>
-      </li>
-      <li class="side-nav__item__sub_sub {{ p_footer_class }}">
-          <a href="/design/pattern/footer">Footer</a>
-        </li>
+      <a href="/design/pattern/header">Header</a>
+    </li>
+
+    <li class="side-nav__item__sub_sub {{ p_passwords_class }}">
+      <a href="/design/pattern/passwords">Asking for passwords</a>
+    </li>
     <li class="side-nav__item__sub_sub {{ p_complete_class }}">
       <a href="/design/pattern/complete">Transaction complete</a>
     </li>
-    
+
     {% endif %}
 
     <li class="side-nav__item__sub {{ patterns_class }}">
       <a href="/design/patterns">APIs/Web Services</a>
     </li>
 
-<!-- 
+    <!-- 
     <li class="side-nav__item__sub {{ pages_class }}">
       <a href="/design/pages">Pages</a>
     </li> -->

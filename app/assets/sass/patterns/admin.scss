@@ -7,11 +7,7 @@
 @import "patterns/admin-tables";
 @import "patterns/admin-layout";
 @import "patterns/admin-card";
-@import "patterns/_related-items";
 @import "patterns/govuk-overrides";
-@import "patterns/gc-core";
-@import "patterns/_task-list";
-@import "patterns/_step-by-step-navigation";
 
 .html-admin {
 	background: white;
@@ -157,7 +153,7 @@
 	.govuk-list,
 	.govuk-file-upload
 	{
-		@include govuk-font(19);
+		@include govuk-font(16);
 	}
 	.enforcer-view {
 		@include mq($until: tablet) {

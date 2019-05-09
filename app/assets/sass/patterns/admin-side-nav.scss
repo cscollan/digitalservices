@@ -35,7 +35,7 @@
 }
 
 .side-nav__item {
-
+  display: none;
   a {
     display: block;
     overflow: hidden;
@@ -92,7 +92,7 @@
 
 
 .side-nav__item__sub {
- 
+  display: none;
   a {
     display: block;
     overflow: hidden;
@@ -147,7 +147,6 @@
   }
 }
 
-
 .side-nav__item__sub_sub {
   display: none;
   a {
@@ -172,7 +171,7 @@
   &.active {
     display: block;
     a {
-      background: lighten($la-blue,10%);
+      background: lighten($la-blue, 15%);
       color: #ffffff;
       &:after {
         content: '';
@@ -203,6 +202,7 @@
     }
   }
 }
+
 
 .counter {
   display: inline-block;

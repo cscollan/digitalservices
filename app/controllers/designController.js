@@ -93,6 +93,20 @@ exports.design_pattern_footer_get = function (req, res) {
     })
 }
 
+exports.design_pattern_passwords_get = function (req, res) {
+    showdesignsub = 'true'
+    showpatternssub = 'true'
+    res.render('design/pattern/passwords', {
+        'title': 'Ask user for a password',
+        'section': 'Patterns',
+        'design_class': 'active',        
+        'patterns_class': 'active',
+        'p_passwords_class': 'active',
+        showdesignsub,
+        showpatternssub
+    })
+}
+
 exports.design_pages_get = function (req, res) {
     showdesignsub = 'true'
     res.render('design/pages', {
@@ -117,4 +131,6 @@ exports.design_component_secondary_button_get = function (req, res) {
         showcomponentssub
     })
 }
+
+
 

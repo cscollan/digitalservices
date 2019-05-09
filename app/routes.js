@@ -7,6 +7,7 @@ var content_Controller = require('../app/controllers/contentController.js')
 var library_Controller = require('../app/controllers/libraryController.js')
 var metrics_Controller = require('../app/controllers/metricsController.js')
 var prototyping_Controller = require('../app/controllers/prototypingController.js')
+var services_Controller = require('../app/controllers/servicesController.js')
 
 router.get('/', (req, res) => {
     res.render('index', {
@@ -15,6 +16,8 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/services/', services_Controller.services_root_get);
+router.get('/services/service/detail/:id', services_Controller.service_detail_get);
 
 router.get('/foundations/', foundations_Controller.foundations_root_get);
 router.get('/foundations/accessibility', foundations_Controller.foundations_accessibility_get);
@@ -39,6 +42,7 @@ router.get('/design/component/secondary-button', design_Controller.design_compon
 router.get('/design/pattern/complete', design_Controller.design_pattern_complete_get);
 router.get('/design/pattern/header', design_Controller.design_pattern_header_get);
 router.get('/design/pattern/footer', design_Controller.design_pattern_footer_get);
+router.get('/design/pattern/passwords', design_Controller.design_pattern_passwords_get);
 
 router.get('/content/', content_Controller.content_root_get);
 router.get('/content/language', content_Controller.content_language_get);
