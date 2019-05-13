@@ -1,0 +1,21 @@
+{
+    "stub": "",
+    "name": "",
+    "lifecycle": "",
+    "summary": "<p class='govuk-body'></p>",
+    "details": "<p class='govuk-body'></p>",
+    "users": [{
+        "type": "" 
+    }],
+    "needs": [{
+        "need": ""
+    }],
+    "history": [{
+        "date": "",
+        "activity": ""
+    }],
+    "links": [{
+        "link": "",
+        "linkText": ""
+    }]
+}

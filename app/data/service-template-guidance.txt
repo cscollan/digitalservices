@@ -1,0 +1,32 @@
+{
+    "stub": "",
+    "name": "",
+    "lifecycle": "",
+    "summary": "<p class='govuk-body'></p>",
+    "details": "<p class='govuk-body'></p>",
+    "users": [{
+        "type": "" 
+    }],
+    "needs": [{
+        "need": ""
+    }],
+    "history": [{
+        "date": "",
+        "activity": ""
+    }],
+    "links": [{
+        "link": "",
+        "linkText": ""
+    }]
+}
+
+
+stub: Enter a unique name for the service. Use hyphens to replace spaces, eg: apply-for-a-pfl or regulatory-returns 
+name: This is the common name of the service. Apply for a personal functional licence or Regulatory returns
+lifecycle: What business lifecycle does this belong to, eg: Licensing, Compliance, Intelligence, Legal
+summary: A 1 liner to describe the service. HTML allowed (Follow GOV Design System for content classes)
+details: A more detailed description of the service. Anyone should be able to fully understand what the service is and what it does from this. HTML allowed (Follow GOV Design System for content classes)
+users: Array list (multiple allowed): New type for each type of user: Public, Operator, Licensing Authority, Web Service
+needs: The primary user needs of the service - if known. eg: Allows members of the public to apply for a personal functional licence so they can work in the casino industry.
+history: Date and activity which have taken place (usually releases and updates). Summary only. No HTML.
+links: Useful related links to the service. eg: SCM, Google Analytics, GOV performance dashboard, etc
