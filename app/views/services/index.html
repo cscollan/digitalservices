@@ -2,42 +2,90 @@
 
 {% block page_header %}
 
-<span class="govuk-caption-l">{{section}}</span>
-<h1 class="govuk-heading-l">{{title}}</h1>
+
 {% endblock %}
 
 {% block content %}
 
+
+
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">       
-    
-    
-            <p class="govuk-body">Understand more about the digital services provided by the Gambling Commission and access resources relating to each service.</p>
 
-            <table class="govuk-table">
-            
-                    <thead class="govuk-table__head">
-                      <tr class="govuk-table__row">
-                        <th class="govuk-table__header" scope="col">Service</th>
-                        <th class="govuk-table__header" scope="col">Summary</th>
-                      </tr>
-                    </thead>
-                    <tbody class="govuk-table__body">
 
-                              
-                     {% for service in data.services %}
-                     <tr class="govuk-table__row">
-                            <th class="govuk-table__header" scope="row">
-                                    <a href="/services/service/detail/{{service.stub}}">{{service.name}}</a>
-                               </th>
-                            <td class="govuk-table__cell">{{service.summary}}</td>
-                          </tr>
-                      
-                     {% endfor %}
-                    </tbody>
-                  </table>
+  <section class="tag-headers govuk-!-padding-top-3">
+    <section class="govuk-grid-column-fifth">
+      <div class="tag explore">Backlog</div>
+      <div class="big_number txt-explore">0</div>
+    </section>
+    <section class="govuk-grid-column-fifth">
+      <div class="tag discovery">Discovery</div>
+      <div class="big_number txt-discovery">0</div>
+    </section>
+    <section class="govuk-grid-column-fifth">
+      <div class="tag alpha">Alpha</div>
+      <div class="big_number txt-alpha">3</div>
+    </section>
+    <section class="govuk-grid-column-fifth">
+      <div class="tag beta">Beta</div>
+      <div class="big_number txt-beta">1</div>
+    </section>
+    <section class="govuk-grid-column-fifth">
+      <div class="tag live">Live</div>
+      <div class="big_number txt-live">1</div>
+    </section>
+  </section>
+
+
+
+  <section class="govuk-grid-column-fifth">
+    <ul class="link-list border-explore">
+
+
+    </ul>
+  </section>
+  <section class="govuk-grid-column-fifth">
+    <ul class="link-list border-discovery">
+
     
-</div>
+
+
+    </ul>
+  </section>
+  <section class="govuk-grid-column-fifth">
+    <ul class="link-list border-alpha">
+      <li>
+        <a href="/services/product-pages/apply-for-a-pfl">Get information about licensed gambling businesses</a>
+      </li>
+      <li>
+        <a href="/services/product-pages/apply-for-a-pfl">Get information about licensed gambling premises</a>
+      </li> 
+       <li>
+        <a href="/services/product-pages/apply-for-a-pfl">Get information about regulatory gambling sanctions</a>
+      </li>
+    </ul>
+  </section>
+  <section class="govuk-grid-column-fifth">
+    <ul class="link-list border-beta">
+
+      <li>
+        <a href="/services/product-pages/apply-for-a-pfl">Manage and maintain your personal licence</a>
+      </li>
+
+    </ul>
+  </section>
+  <section class="govuk-grid-column-fifth">
+    <ul class="link-list border-live">
+
+      <li>
+        <a href="/services/product-pages/apply-for-a-pfl">Apply for a personal functional licence</a>
+      </li>
+
+    </ul>
+  </section>
+
+
+
+
 
 </div>
 {% endblock %}

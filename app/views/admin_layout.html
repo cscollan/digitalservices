@@ -67,8 +67,8 @@ with-proposition
     <li class="side-nav__item__sub {{ phases_class }}">
       <a href="/foundations/phases">Phases</a>
     </li>
-    <li class="side-nav__item__sub {{ principles_class }}">
-      <a href="/foundations/principles">Principles</a>
+    <li class="side-nav__item__sub {{ standards_class }}">
+      <a href="/foundations/standards">Standards</a>
     </li>
     <li class="side-nav__item__sub {{ wow_class }}">
       <a href="/foundations/wow">Ways of working</a>
@@ -171,20 +171,8 @@ with-proposition
 <div class="main-container {{enforcerClass}}">
 
   <main role="main" id="adminContent" class="govuk-main-wrapper">
-    {{ govukPhaseBanner({
-        "tag": {
-          "text": "Alpha"
-        },
-        "html": 'This service is in early alpha and content is regularly changing.'
-      }) }}
-    {% block success_panel %}
+ 
 
-    <div class="success-panel">
-      <p data-successmessage></p>
-      <a class="success-panel__close" href="?">Close</a>
-    </div>
-
-    {% endblock %}
     {% block back_link %}{% endblock %}
     <div class="content-wrapper">
       {% if title %}

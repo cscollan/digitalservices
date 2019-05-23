@@ -21,13 +21,13 @@ exports.foundations_accessibility_get = function (req, res) {
     })
 }
 
-exports.foundations_principles_get = function (req, res) {
+exports.foundations_standards_get = function (req, res) {
     showfoundationsub = 'true'
-    res.render('foundations/principles', {
-        'title': 'Principles',
+    res.render('foundations/standards', {
+        'title': 'Standards',
         'section': 'Foundations',
         'foundations_class': 'active',        
-        'principles_class': 'active',
+        'standards_class': 'active',
         showfoundationsub
     })
 }
