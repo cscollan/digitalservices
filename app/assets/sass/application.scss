@@ -75,11 +75,11 @@ $path: "/public/images/";
 .tag {
   color: white !important;
   font-weight: 700;
-  padding: 0.35em 0.25em 0.25em 0.25em;
+  padding: 5px 40px 5px 40px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16pt;
+  font-size: 14pt;
 }
 
 .big_number {
@@ -89,25 +89,25 @@ $path: "/public/images/";
 }
 
 
-.tag.explore {
+.tag.explore, .explore {
   background-color: #2e358b;
 }
 
-.tag.discovery {
+.tag.discovery, .discovery {
   background-color: #912b88;
 }
 
-.tag.alpha,.tag.design {
+.tag.alpha,.tag.design, .alpha {
   background-color: #d53880;
 }
 
-.tag.beta,.tag.implementation {
+.tag.beta,.tag.implementation, .beta {
   background-color: #cd4a0c;
 }
 
 
 
-.tag.live {
+.tag.live, .live {
   background-color: #85994b;
 }
 
@@ -309,4 +309,15 @@ main {
 
 * {
   font-family: nta,Arial,sans-serif;
+}
+
+
+
+.gc-product-page{
+  background: $govuk-blue;
+  padding: 30px 30px 10px 30px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+    .govuk-heading-xl, .govuk-body-l, .govuk-body{color: $white;}
+    .tag{border: 4px solid $white;}
 }

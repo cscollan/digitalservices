@@ -1,0 +1,269 @@
+{% extends "admin_layout.html" %}
+
+{% block page_header %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="http://localhost:3123/services/" class="govuk-back-link">Back</a>
+        <span class="govuk-caption-xl">Information Service</span>
+        <h1 class="govuk-heading-xl">Apply for a Personal Functional Licence (PFL)</h1>
+
+        <div class="app-related-items">
+            <p> <span class="tag live">Live</span></p>
+            
+            <h2 class="govuk-heading-l">Summary</h2>
+            
+            <p class="govuk-body">Apply for a PFL is a service provided by the Gambling Commission to allow users to
+                apply for a Personal Functional Licence. This will allow them to work within the casino industry. </p>
+
+                        <div class="govuk-accordion" data-module="accordion" id="accordion-default">
+
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                                User needs
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content"
+                        aria-labelledby="accordion-default-heading-2">
+                        <p class='govuk-body'>If you plan to be involved in gaming or handling cash in relation to
+                            gambling at a casino you must hold a personal functional licence (PFL) before you start
+                            work.</p>
+                        <p class='govuk-body'>You need a PFL if you are:
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>a dealer/croupier</li>
+                                <li>a cashier</li>
+                                <li>an inspector</li>
+                                <li>a pit boss/gaming supervisor</li>
+                                <li>security staff/monitoring surveillance related to gambling activities.</li>
+                            
+                            </ul>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                                User stories
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-2" class="govuk-accordion__section-content"
+                        aria-labelledby="accordion-default-heading-2">
+                        <p class='govuk-body'>As a potential employee of a casino, I need to apply for and be granted a
+                            personal licence by the Gambling Commission, so that I am able to work.</p>
+
+                        <p class='govuk-body'> This service meets the needs of the user when:
+                         <ul class="govuk-list govuk-list--bullet">
+                            <li>Application has been completed and submitted</li>
+                            <li>Licence has been granted</li>
+                            <li>The licencee is able to commence employement</li>
+                        </ul>
+                   
+                    </div>
+                
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                                Meeting the service standards
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+                        aria-labelledby="accordion-default-heading-3">
+                        <p class='govuk-body'>In order for us to meet point 10 of the Service Standard, we have
+                            collected a number of performance indicators. This allows us to see where improvement is
+                            needed and if our service is successful.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="govuk-!-padding-bottom-9"></div>
+
+
+            <h2 class="govuk-heading-l">Performance metrics</h2>
+            <p class='govuk-body'>In order to see how the service is performing, the following performance metrics have
+                been recorded.</p>
+            <p class='govuk-body'>
+             <ul class="govuk-list govuk-list--bullet">
+                <li>How many open applications there are</li>
+                <li>How many applications have been granted</li>
+                <li>Current processing time</li>
+            </ul>
+
+            <div class="govuk-!-padding-bottom-1"></div>
+
+            <p class='govuk-body'>These have been grouped by previous day, week, month and year.</p>
+
+            <div class="govuk-!-padding-bottom-9"></div>
+
+            <div class="govuk-tabs" data-module="tabs">
+                <h2 class="govuk-tabs__title">
+                    Contents
+                </h2>
+
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#past-day">
+                            Past day
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#past-week">
+                            Past week
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#past-month">
+                            Past month
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#past-year">
+                            Past year
+                        </a>
+                    </li>
+                </ul>
+
+                <section class="govuk-tabs__panel" id="past-day">
+                    <h2 class="govuk-heading-2">Past day</h2>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="col">Apps started</th>
+                                <th class="govuk-table__header" scope="col">Apps granted</th>
+                                <th class="govuk-table__header" scope="col">Time taken</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">3</td>
+                                <td class="govuk-table__cell">20 mins</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+                    <h2 class="govuk-heading-2">Past week</h2>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="col">Apps started</th>
+                                <th class="govuk-table__header" scope="col">Apps granted</th>
+                                <th class="govuk-table__header" scope="col">Time taken</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">22</td>
+                                <td class="govuk-table__cell">15</td>
+                                <td class="govuk-table__cell">10 mins</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+                    <h2 class="govuk-heading-2">Past month</h2>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="col">Apps started</th>
+                                <th class="govuk-table__header" scope="col">Apps granted</th>
+                                <th class="govuk-table__header" scope="col">Time taken</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">43</td>
+                                <td class="govuk-table__cell">37</td>
+                                <td class="govuk-table__cell">34 mins</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+                    <h2 class="govuk-heading-2">Past year</h2>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="col">Apps started</th>
+                                <th class="govuk-table__header" scope="col">Apps granted</th>
+                                <th class="govuk-table__header" scope="col">Time taken</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">55</td>
+                                <td class="govuk-table__cell">53</td>
+                                <td class="govuk-table__cell">25 mins</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+
+            </div>
+
+            <div class="govuk-!-padding-bottom-2"></div>
+
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+            <h2>Measuring how services are performing</h2>
+
+            <p class='govuk-body'>As we are a central government service, we are working towards collecting data for the
+                4 mandatory key performance indicators (KPI's) required. These are:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Cost per transaction</li>
+
+                 <li>User satisfaction</li>
+
+                 <li>Completion rate</li>
+
+                 <li>Digital take-up</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-thrid">
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h3 class="govuk-heading-3">Product Owner</h3>
+        <p>Judy White</p>
+
+        <h3 class="govuk-heading-3">Service Owner</h3>
+        <p>Toni Headen</p>
+
+        <h3 class="govuk-heading-3">Version</h3>
+        <p>TBC</p>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2>Links to other resources</h2>
+        
+            <li><a href="https://secure.gamblingcommission.gov.uk/pflapply/BeforeYouContinue" target="
+                _blank" class="govuk-link">Link to PFL online application</a></li>
+            <li><a href="https://www.gamblingcommission.gov.uk/about/Corporate-governance-and-business-plan/Strategy-and-business-plan.aspx" target="
+                _blank" class="govuk-link">Link to Corporate Strategy</a></li>
+            <li><a href="https://www.gamblingcommission.gov.uk/for-gambling-businesses/Do-I-need-a-licence/Personal-functional-licence.aspx" target="
+                _blank" class="govuk-link">Link to Guidance</a></li>
+            <li><a href="https://www.gamblingcommission.gov.uk/for-gambling-businesses/Compliance/LCCP/Licence-conditions-and-codes-of-practice.aspx" target="
+                _blank" class="govuk-link">Link to LCCP</a></li>
+    </div>
+
+</div>
+{% endblock %}
